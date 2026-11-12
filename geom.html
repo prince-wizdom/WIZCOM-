@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Tells the browser which character set to use -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text that appears on the browser tab -->
+    <title>GEOM Interior Design Masterclass</title>
+
+    <!-- CSS goes inside this style section -->
+    <style>
+
+        /* =========================
+           GENERAL PAGE STYLING
+           ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #2f2a26;
+            background-color: #f8f5f0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+           ========================= */
+
+        header {
+            background-color: #2f2a26;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #d6b47a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d6b47a;
+        }
+
+        /* =========================
+           HERO SECTION
+           ========================= */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(
+                rgba(47, 42, 38, 0.75),
+                rgba(47, 42, 38, 0.75)
+            ),
+            url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0")
+            center/cover;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #d6b47a;
+            color: #2f2a26;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: gold;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: blue;
+        }
+
+        /* =========================
+           GENERAL SECTION
+           ========================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #706861;
+        }
+
+        /* =========================
+           ABOUT
+           ========================= */
+
+        .about {
+            background-color: white;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            color: #5f5954;
+        }
+
+        /* =========================
+           SERVICES
+           ========================= */
+
+        .services {
+            background-color: white;
+          color: #2f2a26;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #2f2a26;
+        }
+
+        .service-card p {
+            color: #706861;
+        }
+
+        /* =========================
+           WHY CHOOSE US
+           ========================= */
+
+        .why-us {
+            background-color: #2f2a26;
+            color: white;
+        }
+
+        .why-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .why-container h3 {
+            color: #d6b47a;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           CONTACT
+           ========================= */
+
+        .contact {
+            background-color: white;
+            color: #2f2a26;
+        }
+
+        .contact-form {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            border: gold;
+            cursor: pointer;
+        }
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            background-color: #2f2a26;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* =========================
+           MOBILE RESPONSIVENESS
+           ========================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .service-container,
+            .why-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+         ========================= -->
+
+    <header>
+
+        <div class="logo">
+            GEOM
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME / HERO
+         ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Master the Art of Interior Design
+            </h1>
+
+            <p>
+                Welcome to GEOM Interior Design Masterclass —
+                where creativity, functionality and beautiful spaces
+                come together.
+            </p>
+
+            <a href="#contact" class="button">
+                Join the Masterclass
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT SECTION
+         ========================= -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+
+            <h2>About GEOM</h2>
+
+            <p>
+                Learn. Create. Transform spaces.
+            </p>
+
+        </div>
+
+        <div class="about-container">
+
+            <p>
+                GEOM Interior Design Masterclass is designed for
+                aspiring interior designers, creative professionals
+                and anyone who wants to understand how to transform
+                ordinary spaces into beautiful and functional environments.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES / COURSES
+         ========================= -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>What You'll Learn</h2>
+
+            <p>
+                Practical skills to help you become a better designer.
+            </p>
+
+        </div>
+
+
+        <div class="service-container">
+
+            <div class="service-card">
+
+                <h3>Interior Design Principles</h3>
+
+                <p>
+                    Understand balance, proportion, rhythm,
+                    harmony and functionality in interior spaces.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Space Planning</h3>
+
+                <p>
+                    Learn how to organize furniture, movement
+                    and different areas within a space.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Colors & Materials</h3>
+
+                <p>
+                    Discover how colors, textures and materials
+                    influence the atmosphere of an interior.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Lighting Design</h3>
+
+                <p>
+                    Learn how to use natural and artificial lighting
+                    to enhance interior spaces.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Furniture Selection</h3>
+
+                <p>
+                    Understand how to choose furniture based on
+                    style, comfort, scale and functionality.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>Design Presentation</h3>
+
+                <p>
+                    Learn how to present your ideas professionally
+                    to clients and communicate your design concepts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY CHOOSE GEOM
+         ========================= -->
+
+    <section class="why-us">
+
+        <div class="section-title">
+
+            <h2>Why GEOM?</h2>
+
+        </div>
+
+
+        <div class="why-container">
+
+            <div>
+                <h3>Practical</h3>
+
+                <p>
+                    Learn through real design concepts and
+                    practical exercises.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Creative</h3>
+
+                <p>
+                    Develop your own design style and creative
+                    thinking.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Professional</h3>
+
+                <p>
+                    Build skills that can help you work with
+                    real clients and projects.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+         ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact GEOM</h2>
+
+            <p>
+                Ready to begin your interior design journey?
+            </p>
+
+        </div>
+
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Your Phone Number"
+            >
+
+            <textarea
+                placeholder="Tell us how we can help..."
+            ></textarea>
+
+            <button
+                type="submit"
+                class="button"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>
+            &copy;2026 GEOM Interior Design Masterclass.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
